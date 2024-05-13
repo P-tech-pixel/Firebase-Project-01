@@ -1,6 +1,6 @@
 {
-    "name":"",
-    "short_name":"",
+    "name":"Magpies Login",
+    "short_name":"ML",
     "icons":
            [
             {"src":"/android-chrome-192x192.png","sizes":"192x192","type":"image/png"},
