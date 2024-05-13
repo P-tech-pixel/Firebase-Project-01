@@ -4,6 +4,8 @@ import { getAuth, signOut } from 'https://www.gstatic.com/firebasejs/10.11.1/fir
 const auth = getAuth();
 const signoutButton = document.getElementById('signoutButton');
 
+//***************************************************************************/
+// Function to sign out user
 signoutButton.addEventListener('click', () => {
     signOut(auth).then(() => {
         // Sign-out successful.
