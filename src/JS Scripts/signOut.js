@@ -1,7 +1,6 @@
-import './initializeFirebase.js';
-import { getAuth, signOut } from 'https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js';
+import {auth} from './initializeFirebase.js';
+import { signOut } from 'https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js';
 
-const auth = getAuth();
 const signoutButton = document.getElementById('signoutButton');
 
 //***************************************************************************/

@@ -1,7 +1,6 @@
-import './initializeFirebase.js';
-import { getAuth, createUserWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js';
+import {auth, firestoreDb} from './initializeFirebase.js';
+import { createUserWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js';
 
-const auth = getAuth();
 
 const registrationForm = document.getElementById('register_form');
 
