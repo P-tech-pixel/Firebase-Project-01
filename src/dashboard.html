@@ -15,8 +15,21 @@
         <h3>My Space</h3>
         <div class="form-group">
             <p>You are Signed Up Successfully !</p>
+            <button id="viewUsers">View list of Users in our Database</button>
+        </div>
+
+        <div class="form-group">
+            <div id="user_list">
+                <table id="userTable">
+                    <tbody>
+                        <!--User details will be appended here-->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="form-group">
             <button id="signoutButton">Sign Out</button>
-            <br><br>
         </div>
     </div>
     <footer>
@@ -25,6 +38,7 @@
     
     <!--Scripts for running Firebase-->
     <script src="JS Scripts/initializeFirebase.js" type="module"></script>
+    <script src="JS Scripts/dashboard.js" type="module"></script>
     <script src="JS Scripts/signOut.js" type="module"></script>
 
 </body>
