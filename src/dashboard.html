@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="styles.css">
 
+<script type="module" src="./JS Scripts/customDesign.js"></script>
+
 <title>Welcome to Your Dashboard</title>
 </head>
 <body>
@@ -17,7 +19,9 @@
             <p>You are Signed Up Successfully !</p>
             <button id="viewUsers">View list of Users in our Database</button>
         </div>
-
+        <div class="form-group">
+            <div id="loading" class="spinner"></div>
+        </div>
         <div class="form-group">
             <div id="user_list">
                 <table id="userTable">

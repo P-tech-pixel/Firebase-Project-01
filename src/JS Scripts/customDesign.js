@@ -7,7 +7,7 @@ function spinToLoad(){
     //simulate a delay
     setTimeout(function(){
       spinner.style.display = 'none';
-    }, 30000);
+    }, 2000);
   
    // console.log("Spinning")
   }

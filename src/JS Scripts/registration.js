@@ -38,7 +38,7 @@ registrationForm.addEventListener( 'submit', async function(event) {
         lastName: lastName  //     const password = registrationForm.password.value
       })
       .then(()=>{
-        spinToLoad();  //invoking the function spinToload() to make a spinning while submitting the form.  
+        spinToLoad();  //invoking the function spinToload() to make a spinning illusion while submitting the form.  
       })
 
 });

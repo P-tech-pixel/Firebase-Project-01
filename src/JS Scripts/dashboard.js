@@ -1,6 +1,8 @@
 import { fireStoreCollectionReference } from './initializeFirebase.js'; // importing these items from the initializeFirebase.js file.
 import { getDocs } from 'https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js';
 
+import { spinToLoad } from './customdesign.js'; // import the customdesign 
+
 function viewListOfUsers (){
 
     //get collection data
@@ -12,8 +14,7 @@ function viewListOfUsers (){
            snapshot.docs.forEach((doc) => {
                users.push({ ...doc.data(), id: doc.id })
            });
-          // console.log(users)
- 
+
             // Get the table body element
             const userTableBody = document.querySelector('#userTable tbody');
             userTableBody.innerHTML = ''; // Clear existing table rows
@@ -45,6 +46,9 @@ function viewListOfUsers (){
            
            })
         })
+        .then(()=>{
+            spinToLoad(); // function to load
+         })
         .catch(err => {
             console.log(err.message);
         })

@@ -1,6 +1,7 @@
 import {auth} from './initializeFirebase.js';  // importing these items from the initializeFirebase.js file.
 import { signInWithEmailAndPassword  } from 'https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js';
 
+import { spinToLoad } from './customdesign.js'; // import the customdesign 
 
 const loginForm = document.getElementById('loginForm');
 
@@ -13,9 +14,12 @@ loginForm.addEventListener('submit', (event) => {
     signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
             const user = userCredential.user;
-            console.log('User signed in: ', user.email);
+           // console.log('User signed in: ', user.email);
             // Redirect to another page or show success message
             window.location.href = "dashboard.html";
+        })
+        .then(() =>{
+            spinToLoad();
         })
         .catch((error) => {
             const errorCode = error.code;
