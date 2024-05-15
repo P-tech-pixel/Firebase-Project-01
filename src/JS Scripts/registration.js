@@ -2,18 +2,7 @@ import { auth, fireStoreCollectionReference } from './initializeFirebase.js'; //
 import { createUserWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js';
 import { addDoc } from 'https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js';
 
-
-function spinToLoad(){
-  var spinner = document.getElementById('loading');
-  spinner.style.display = 'inline-block';
-
-  //simulate a delay
-  setTimeout(function(){
-    spinner.style.display = 'none';
-  }, 30000);
-
- // console.log("Spinning")
-}
+import { spinToLoad } from './customdesign.js';
 
 const registrationForm = document.getElementById('register_form');
 
