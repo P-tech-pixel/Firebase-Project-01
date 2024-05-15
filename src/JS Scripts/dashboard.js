@@ -1,13 +1,10 @@
-import { firestoreDb } from './initializeFirebase.js'; // importing these items from the initializeFirebase.js file.
-import { collection, getDocs } from 'https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js';
+import { fireStoreCollectionReference } from './initializeFirebase.js'; // importing these items from the initializeFirebase.js file.
+import { getDocs } from 'https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js';
 
 function viewListOfUsers (){
 
-     //collection reference
-     const collectionReference = collection(firestoreDb, 'users') // this collection is being stored in the collection called collectionReference
-
     //get collection data
-    getDocs(collectionReference) // this looks for all the data in collectionReference
+    getDocs(fireStoreCollectionReference) // this looks for all the data in collection Reference of firestore
         .then((snapshot) => {
            // console.log(snapshot.docs) // testing the retrival of the snapshots (datas).
            let users = []   // empty user array to retrive all the details. 
