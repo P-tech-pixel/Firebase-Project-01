@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="styles.css">
 
 <script type="module" src="./JS Scripts/customDesign.js"></script>
+<script src="JS Scripts/formValidation.js" type="module"></script> <!-- Include formValidation.js -->
 
 <title>Magpies Sign Up</title>
 </head>
@@ -23,20 +24,29 @@
               <div class="form-group">
                   <label for="firstName">First Name</label>
                   <input type="text" id="firstName" name="firstName" required>
+                  <div class="error-message"></div> <!-- Error message container -->
               </div>
       
               <div class="form-group">
-              <label for="lastName">Last Name</label>
-              <input type="text" id="lastName" name="lastName" required>
+                  <label for="lastName">Last Name</label>
+                  <input type="text" id="lastName" name="lastName" required>
+                  <div class="error-message"></div> <!-- Error message container -->
               </div>
       
               <div class="form-group">
                   <label for="email">Email</label>
                   <input type="email" id="email" name="email" required>
+                  <div class="error-message"></div> <!-- Error message container -->
               </div>
               <div class="form-group">
                   <label for="password">Password</label>
                   <input type="password" id="password" name="password" required>
+                  <div class="error-message"></div> <!-- Error message container -->
+              </div>
+              <div class="form-group">
+                  <label for="verify_password">Verify Password</label>
+                  <input type="password" id="verify_password" name="verify_password" required>
+                  <div class="error-message"></div> <!-- Error message container -->
               </div>
               <div class="form-group">
                   <button type="submit" id="signupButton">Register</button>
@@ -59,5 +69,4 @@
         <script src="JS Scripts/initializeFirebase.js" type="module"></script>
         <script src="JS Scripts/registration.js" type="module"></script>
 </body>
-
 </html>
