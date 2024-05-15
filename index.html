@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./src/styles.css">
     <title>Login</title>
-
-    <script type="module" src="./JS Scripts/customDesign.js"></script>
+    
+    <!-- Scripts for running Firebase -->
+    <script type="module" src="./src/JS Scripts/initializeFirebase.js"></script>
+    <script type="module" src="./src/JS Scripts/customDesign.js"></script>
+    <script type="module" src="./src/JS Scripts/signIn.js"></script>
 </head>
 <body>
     <header>
@@ -31,14 +34,11 @@
             </div>
         </form>
         <div class="form-group">
-            <a href="./registration.html" >create account</a>
+            <a href="./src/registration.html" >Create account</a>
          </div>
     </div>
     <footer>
-        <script src="JS Scripts/footer.js"></script>
+        <script src="./src/JS Scripts/footer.js"></script>
     </footer>
-    <!-- Scripts for running Firebase -->
-    <script type="module" src="JS Scripts/initializeFirebase.js"></script>
-    <script type="module" src="JS Scripts/signIn.js"></script>
 </body>
 </html>

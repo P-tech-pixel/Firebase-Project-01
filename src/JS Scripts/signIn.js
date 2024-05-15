@@ -16,7 +16,7 @@ loginForm.addEventListener('submit', (event) => {
             const user = userCredential.user;
            // console.log('User signed in: ', user.email);
             // Redirect to another page or show success message
-            window.location.href = "dashboard.html";
+            window.location.href = '/src/dashboard.html'; // redirecting the dashboard.html file from index.html file. 
         })
         .then(() =>{
             spinToLoad();
