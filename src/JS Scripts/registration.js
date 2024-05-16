@@ -15,31 +15,36 @@ registrationForm.addEventListener('submit', async function(event) {
       const lastName = registrationForm.lastName.value;
       const email = registrationForm.email.value; 
       const password = registrationForm.password.value;
+
+      let userLoginId;
       
       // create an account using email and password with Firebase authentication
       createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
           // Signed up successfully
           var user = userCredential.user;
-          // Redirect to another page
-          window.location.href = "dashboard.html";
+           userLoginId = user.uid;
+
+          // Adding the user's input to firestore 
+        return addDoc(fireStoreCollectionReference, {
+            userLoginId: userLoginId,
+            email: email,
+            firstName: firstName,
+            lastName: lastName
+        })
+        .then(() => {
+            spinToLoad(); // Invoking the function spinToLoad() to create a spinning illusion while submitting the form.  
+        })
+        .then(()=>{
+           // Redirect to another page
+           window.location.href = "dashboard.html";
+        });
       })
       .catch((error) => {
           // Handle sign-up errors
           var errorCode = error.code;
           var errorMessage = error.message;
           console.error("Sign up error:", errorMessage);
-      });
-  
-      // Adding the user's input to firestore
-      addDoc(fireStoreCollectionReference, {
-          email: email,
-          firstName: firstName,
-          lastName: lastName
       })
-      .then(() => {
-          spinToLoad(); // Invoking the function spinToLoad() to create a spinning illusion while submitting the form.  
-      });
     }
 });
-
