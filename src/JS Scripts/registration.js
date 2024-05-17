@@ -1,7 +1,7 @@
 import { auth, fireStoreCollectionReference } from './initializeFirebase.js';
 import { createUserWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js';
 import { addDoc } from 'https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js';
-import { spinToLoad } from './customdesign.js';
+import { spinToLoad } from './design.js';
 import { validateForm } from './formValidation.js';
 
 const registrationForm = document.getElementById('register_form');

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Loading...</title>
+</head>
+<body>
+    <div class="container">
+        <h3>Connecting to server...</h3>
+        <form class="register_form" id="register_form">
+            <div class="form-group">
+                <div id="loading" class="spinner"></div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Load customDesign.js first -->
+    <script src="./JS Scripts/customDesign.js" type="module"></script>
+    <!-- Then load loadingPage.js -->
+    <script src="./JS Scripts/loadingPage.js" type="module"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Redirect to dashboard.html after 3 seconds
+            setTimeout(function() {
+                window.location.href = "dashboard.html";
+            }, 3000); // 3000 milliseconds = 3 seconds
+        });
+    </script>
+</body>
+</html>

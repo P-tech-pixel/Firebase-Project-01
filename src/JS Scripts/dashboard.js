@@ -1,7 +1,7 @@
 import { fireStoreCollectionReference } from './initializeFirebase.js'; // importing these items from the initializeFirebase.js file.
 import { getDocs } from 'https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js';
 
-import { spinToLoad } from './customdesign.js'; // import the customdesign 
+import { spinToLoad } from './design.js'; // import the customdesign 
 
 function viewListOfUsers (){
 
