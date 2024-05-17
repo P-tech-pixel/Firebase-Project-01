@@ -1,8 +1,6 @@
 import {auth} from './initializeFirebase.js';  // importing these items from the initializeFirebase.js file.
 import { signInWithEmailAndPassword  } from 'https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js';
 
-import { spinToLoad } from './design.js'; // import the customdesign 
-
 const loginForm = document.getElementById('loginForm');
 
 loginForm.addEventListener('submit', (event) => {
@@ -17,9 +15,6 @@ loginForm.addEventListener('submit', (event) => {
            // console.log('User signed in: ', user.email);
             // Redirect to another page or show success message
             window.location.href = "/src/loadingPage.html"; // redirecting the dashboard.html file from index.html file. 
-        })
-        .then(() =>{
-            spinToLoad();
         })
         .catch((error) => {
             const errorCode = error.code;

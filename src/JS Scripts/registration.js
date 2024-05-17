@@ -1,7 +1,6 @@
 import { auth, fireStoreCollectionReference } from './initializeFirebase.js';
 import { createUserWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js';
 import { addDoc } from 'https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js';
-import { spinToLoad } from './design.js';
 import { validateForm } from './formValidation.js';
 
 const registrationForm = document.getElementById('register_form');
@@ -31,9 +30,6 @@ registrationForm.addEventListener('submit', async function(event) {
             email: email,
             firstName: firstName,
             lastName: lastName
-        })
-        .then(() => {
-            spinToLoad(); // Invoking the function spinToLoad() to create a spinning illusion while submitting the form.  
         })
         .then(()=>{
             // Redirect to loading page
