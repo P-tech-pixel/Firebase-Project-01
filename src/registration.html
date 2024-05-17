@@ -19,13 +19,8 @@
     </header>
     <main>
         <div class="container">
+          <h3>Create account</h3>
           <form class="register_form" id="register_form">
-              <div class="form-group">
-                <img id="logo" src="/src/img/logo-trans.png" aria-placeholder="Logo">
-              </div>
-              <div class="form-group">
-                 <p>Create account</p>
-              </div>
               <div class="form-group">
                   <label for="firstName">First Name</label>
                   <input type="text" id="firstName" name="firstName" required>
@@ -66,12 +61,12 @@
          </div>
        </div>
     </main>
+    <footer>
+        <script src="JS Scripts/footer.js"></script>
+    </footer>
+        <!--Scripts for running Firebase-->
+        <!--Running the scripts-->
+        <script src="JS Scripts/initializeFirebase.js" type="module"></script>
+        <script src="JS Scripts/registration.js" type="module"></script>
 </body>
-<footer>
-    <script src="JS Scripts/footer.js"></script>
-</footer>
-    <!--Scripts for running Firebase-->
-    <!--Running the scripts-->
-    <script src="JS Scripts/initializeFirebase.js" type="module"></script>
-    <script src="JS Scripts/registration.js" type="module"></script>
 </html>
