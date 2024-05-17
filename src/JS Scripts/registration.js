@@ -36,9 +36,9 @@ registrationForm.addEventListener('submit', async function(event) {
             spinToLoad(); // Invoking the function spinToLoad() to create a spinning illusion while submitting the form.  
         })
         .then(()=>{
-           // Redirect to another page
-           window.location.href = "dashboard.html";
-        });
+            // Redirect to loading page
+            window.location.href = "/src/loadingPage.html";
+         })
       })
       .catch((error) => {
           // Handle sign-up errors
