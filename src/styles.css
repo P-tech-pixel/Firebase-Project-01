@@ -6,6 +6,7 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: Tahoma, Geneva, sans-serif;
 }
 
 .container {
@@ -30,7 +31,6 @@ html, body {
 
 .form-group p {
     color: black;
-    font-family: Arial, sans-serif;
     font-weight: bold;
     background-color: #78b80129;
     text-align: center;
@@ -46,7 +46,6 @@ html, body {
 .form-group label {
     color: black;
     font-weight: normal;
-    font-family: Arial, sans-serif;
 }
 
 .form-group input {
@@ -56,7 +55,6 @@ html, body {
     border: 1px solid black;
     border-radius: 4px;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
     margin-bottom: 15px;
     font-size: 16px;
 }
@@ -70,25 +68,24 @@ html, body {
 .form-group button {
     width: 100%;
     padding: 15px;
-    background-color: #77b801;
+    background-color: #1a4292;
     color: #fff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    font-family: Arial, sans-serif;
+    font-family: Georgia, serif;
     box-shadow: 0 0 10px rgba(144, 144, 144, 0.5);
     font-size: 16px;
 }
 
 .form-group button:hover {
-    background-color: #78b80198;
+    background-color: #1a42929e;
     color: #000000;
 }
 
 .form-group a {
     color: black;
-    font-family: Arial, sans-serif;
     text-decoration: none;
     text-align: center;
     display: block;
@@ -178,5 +175,19 @@ footer {
 
     .form-group a {
         font-size: 12px;
+    }
+}
+
+/* Making the connecting animated */
+#connecting {
+    animation: fadein 2s forwards; /* Apply the fade-in animation */
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0; /* Start with opacity 0 */
+    }
+    to {
+        opacity: 1; /* Fade to full opacity */
     }
 }

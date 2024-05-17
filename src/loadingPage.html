@@ -8,10 +8,11 @@
 </head>
 <body>
     <div class="container">
-        <h3>Connecting to server........</h3>
-        <form class="register_form" id="register_form">
+        <div id="connecting">
+            <p id="connecting-text">Connecting to Server</p>
+        </div>
             <div class="form-group">
-                <div id="loading" class="spinner"></div>
+                <div id="loading" class="spinner">
             </div>
         </form>
     </div>
@@ -23,10 +24,19 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
+
+            // making connecting ....... animation
+            const textElement = document.getElementById('connecting-text');
+            let dotCount = 0;
+            setInterval(function() {
+                dotCount = (dotCount + 1) % 4; // Cycle through 0, 1, 2, 3
+                textElement.textContent = 'Connecting to Server' + '.'.repeat(dotCount);
+            }, 500); // Change text every 500ms
+
             // Redirect to dashboard.html after 3 seconds
             setTimeout(function() {
                 window.location.href = "dashboard.html";
-            }, 3000); // 3000 milliseconds = 3 seconds
+            }, 4000); // 4000 milliseconds = 4 seconds
         });
     </script>
 </body>
