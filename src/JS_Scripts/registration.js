@@ -22,7 +22,7 @@ registrationForm.addEventListener('submit', async function(event) {
       .then((userCredential) => {
           // Signed up successfully
           var user = userCredential.user;
-           userLoginId = user.uid;
+           userLoginId = user.uid; // users uniqure ids
 
           // Adding the user's input to firestore 
         return addDoc(fireStoreCollectionReference, {
