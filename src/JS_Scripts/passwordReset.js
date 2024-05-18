@@ -1,14 +1,12 @@
 import { auth } from './initializeFirebase.js';
 import { sendPasswordResetEmail } from 'https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js';
-import { spinToLoad } from './design.js';
-
 
 const passwordResetForm = document.getElementById('passwordResetForm');
 
 passwordResetForm.addEventListener('submit', (event)=>{
     event.preventDefault();
 
-    const verify_email = passwordResetForm.verify_email.value;
+    var verify_email = passwordResetForm.verify_email.value;
 
     sendPasswordResetEmail(auth, verify_email)
     .then(() => {
