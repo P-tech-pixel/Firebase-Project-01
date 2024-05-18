@@ -26,11 +26,25 @@ function getFireStoreDbUsersList() {
             // Return an empty array or handle the error as required
             return [];
         });
+};
+
+function getUsersEmails(){
+    return getFireStoreDbUsersList()
+    .then(()=>{
+        // Extracting emails from the users array
+        const emails = users.map(user => user.email);
+        return emails;
+    })
+    .catch(err => {
+        console.log(err.message);
+        // Return an empty array or handle the error as required
+        return [];
+    });
 }
 
-// Example usage
-getFireStoreDbUsersList().then(users => {
-    console.log(users);
+// Example usage:
+getUserEmails().then(emails => {
+    console.log(emails); // Prints the list of user emails to the console
 });
 
 
