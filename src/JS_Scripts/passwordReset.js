@@ -10,7 +10,7 @@ passwordResetForm.addEventListener('submit', (event)=>{
 
     sendPasswordResetEmail(auth, verify_email)
     .then(() => {
-        alert('Password Reset request send. If the email exist in our databse, you will receive an email from us.');
+        alert('Password reset request send. Please check your email.');
     })
                                 // .then(()=>{
                                 
