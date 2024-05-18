@@ -2,6 +2,7 @@
 import { fireStoreCollectionReference } from './initializeFirebase.js'; // Importing the Firestore collection reference.
 import { onSnapshot, query, where } from 'https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js'; // Importing Firestore functions from the Firebase SDK.
 
+
 function getUsersEmailsFromFireStoreDb(userEmail) {
     // Creating a Firestore query to find documents where the email field matches the provided userEmail.
     const q = query(fireStoreCollectionReference, where("email", "==", userEmail));
@@ -28,17 +29,9 @@ function getUsersEmailsFromFireStoreDb(userEmail) {
     });
 }
 
-// Get the password reset button element from the DOM.
-const findUserEmailFromList = document.getElementById('passwordResetButton');
+// add more functions if you want to get the other attributes of users from firestore database:
 
-// Add a click event listener to the password reset button.
-findUserEmailFromList.addEventListener('click', () => {
-    // Get the value entered in the email verification input field.
-    const userEmailToResetPassword = document.getElementById('verify_email').value;
 
-    // Call the function to get users' emails from Firestore using the entered email.
-    getUsersEmailsFromFireStoreDb(userEmailToResetPassword);
-});
-
+export{ getUsersEmailsFromFireStoreDb };
 
 
