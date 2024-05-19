@@ -12,7 +12,6 @@ passwordResetForm.addEventListener('submit', (event)=>{
     //verify if the user exists on fireStore database or not
     getUsersEmailsFromFireStoreDb(verify_email);
     
-
     //send a password reset request to user
     sendPasswordResetEmail(auth, verify_email)
     .then(() => {
@@ -24,3 +23,4 @@ passwordResetForm.addEventListener('submit', (event)=>{
        console.error('Error:', errorCode, errorMessage);
      })
 });
+

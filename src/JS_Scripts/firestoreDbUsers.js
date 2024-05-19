@@ -31,7 +31,6 @@ function getUsersEmailsFromFireStoreDb(userEmail) {
 
 // add more functions if you want to get the other attributes of users from firestore database:
 
-
-export{ getUsersEmailsFromFireStoreDb };
+export{ getUsersEmailsFromFireStoreDb }; // export this to passwordReset.js and signIn.js to determine the email exist or not in database, while the user input the email before submitting. 
 
 
