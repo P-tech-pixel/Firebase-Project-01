@@ -1,6 +1,5 @@
 import {auth} from './initializeFirebase.js';  // importing these items from the initializeFirebase.js file.
 import { signInWithEmailAndPassword  } from 'https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js';
-import { getUsersEmailsFromFireStoreDb } from './firestoreDbUsers.js';
 
 const loginForm = document.getElementById('loginForm');
 
@@ -10,10 +9,6 @@ loginForm.addEventListener('submit', (event) => {
     const email = loginForm.email.value;
     const password = loginForm.password.value;
 
-    //determine the email input match or not.
-    if(getUsersEmailsFromFireStoreDb(email)){
-        alert('Your email does not match the database.');
-    }else{
         // firebase function to sign in to email and passoword. 
         signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
@@ -25,8 +20,11 @@ loginForm.addEventListener('submit', (event) => {
         .catch((error) => {
             const errorCode = error.code;
             const errorMessage = error.message;
-            console.error('Error signing in: ', errorCode, errorMessage);
+            console.error('Error message: ', errorMessage);
+            console.error('Error code:', errorCode);
             // Display error message to user
+             if (errorCode === 'auth/invalid-credential') {
+                alert('invalid email or password.');
+             }
         });
-    }
 });
