@@ -1,1 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Portal</title>
+    <link rel="stylesheet" href="./css/portalStyles.css">
+</head>
+<body>
+    <div class="navigation">
+        <nav>
+            <img id="logo" src="/src/img/logo-trans.png" alt="Logo">
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-links">
+                <!-- <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li> -->
+                <button id="helpButton">Help</button>
+                <button id="aboutButton">About</button>
+                <button id="signoutButton">Sign out</button>
+            </ul>
+        </nav>
+    </div>
+    <div class="main-content">
+        <h1>Welcome</h1>
+        <div class="card-container">
+            <div class="card">
+                <a href="#">Set password</a>
+                <p>Set a password for your Website Portal account now.</p>
+            </div>
+            <div class="card">
+                <a href="#">My Data</a>
+                <p>Update your contact details</p>
+            </div>
+            <div class="card">
+                <a href="#">Emails</a>
+                <p>Setup and manage your email accounts</p>
+            </div>
+            <div class="card">
+                <a href="#">Domains</a>
+                <p>View your domains and register new ones</p>
+            </div>
+            <div class="card">
+                <a href="#">Feedback</a>
+                <p>Discover your website!</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <script src="./JS_Scripts/footer.js"></script>
+    </footer>
+</body>
+
+<!--Scripts for running Firebase-->
+<script src="JS_Scripts/initializeFirebase.js" type="module"></script>
+<script src="JS_Scripts/dashboard.js" type="module"></script>
+<script src="JS_Scripts/nav.js"></script>
+<script src="JS_Scripts/signOut.js" type="module"></script>
+
+</html>
+
 
