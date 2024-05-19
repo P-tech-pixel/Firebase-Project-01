@@ -20,7 +20,7 @@ html, body {
 }
 
 #logo {
-    max-width: 150px;
+    max-width: 80px;
     height: auto;
 }
 
@@ -35,7 +35,7 @@ html, body {
     margin: 10px 10px;
     background-color: #ffffff;
     border: none;
-    font-size: 20px;
+    font-size: 15px;
 }
 .nav-links button:hover {
     background-color: #78b80160;
