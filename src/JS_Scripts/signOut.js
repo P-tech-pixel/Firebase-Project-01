@@ -8,6 +8,7 @@ const signoutButton = document.getElementById('signoutButton');
 signoutButton.addEventListener('click', () => {
     signOut(auth).then(() => {
         // Sign-out successful.
+        localStorage.removeItem('userEmail'); // wipe user email while signing out. 
         window.location.href = '/index.html';
     }).catch((error) => {
         // An error happened.

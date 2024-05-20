@@ -4,7 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portal</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+
+    <!--Scripts for running Firebase-->
     <link rel="stylesheet" href="./css/portalStyles.css">
+    <script type="module" src="./JS_Scripts/portal/viewProfile.js"></script>
+    <script type="module" src="./JS_Scripts/signOut.js"></script>
+    <script src="JS_Scripts/initializeFirebase.js" type="module"></script>
+    <script src="JS_Scripts/nav.js" type="module"></script>
+    <script type="module" src="JS_Scripts/portal/userDetails.js"></script>
 </head>
 <body>
     <div class="navigation">
@@ -14,8 +25,6 @@
                 <span class="hamburger"></span>
             </button>
             <ul class="nav-links">
-                <!-- <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li> -->
                 <button id="helpButton">Help</button>
                 <button id="aboutButton">About</button>
                 <button id="signoutButton">Sign out</button>
@@ -23,27 +32,24 @@
         </nav>
     </div>
     <div class="main-content">
-        <h1>Welcome</h1>
+        <!--UserEmail is the section where a user who logged in gets a greeting with his email-->
+        <h1>Welcome <span id="userEmail"></span></h1>
         <div class="card-container">
             <div class="card">
-                <a href="#">Set password</a>
-                <p>Set a password for your Website Portal account now.</p>
+                <h4>Manage</h4>
+                <a href="#">view my details</a>
             </div>
             <div class="card">
-                <a href="#">My Data</a>
-                <p>Update your contact details</p>
-            </div>
-            <div class="card">
-                <a href="#">Emails</a>
-                <p>Setup and manage your email accounts</p>
-            </div>
-            <div class="card">
-                <a href="#">Domains</a>
-                <p>View your domains and register new ones</p>
-            </div>
-            <div class="card">
-                <a href="#">Feedback</a>
-                <p>Discover your website!</p>
+                <h4>My Profile</h4>
+                <div id="show-firstName">
+                    <!--Value goes here !-->
+                </div>
+                <div id="show-lastName">
+                    <!--Value goes here !-->
+                </div>
+                <div id="show-email">
+                    <!--Value goes here !-->
+                </div>
             </div>
         </div>
     </div>
@@ -51,13 +57,7 @@
         <script src="./JS_Scripts/footer.js"></script>
     </footer>
 </body>
-
-<!--Scripts for running Firebase-->
-<script src="JS_Scripts/initializeFirebase.js" type="module"></script>
-<script src="JS_Scripts/dashboard.js" type="module"></script>
-<script src="JS_Scripts/nav.js"></script>
-<script src="JS_Scripts/signOut.js" type="module"></script>
-
 </html>
+
 
 

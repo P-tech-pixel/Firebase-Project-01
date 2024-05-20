@@ -1,5 +1,9 @@
 {
     "workbench.editor.enablePreview": false,
+<<<<<<< HEAD
     "workbench.editor.showTabs": true
+=======
+    "workbench.editor.showTabs": "multiple"
+>>>>>>> branch3-signin-and-signout-works-with-the-portal-fectching-userDetail-when-added-manually
   }
   
