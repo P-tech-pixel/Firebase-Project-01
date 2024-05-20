@@ -51,6 +51,7 @@ html, body {
 
 .form-group {
     width: 100%;
+    margin-bottom: 1%;
 }
 
 .form-group label {
@@ -186,6 +187,10 @@ footer {
     .form-group a {
         font-size: 12px;
     }
+}
+
+#reset-request-send-message label{
+    color: red;
 }
 
 /* Making the connecting animated */
