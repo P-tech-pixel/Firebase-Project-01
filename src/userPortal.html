@@ -9,13 +9,13 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
 
-        <!--Scripts for running Firebase-->
+    <!--Scripts for running Firebase-->
     <link rel="stylesheet" href="./css/portalStyles.css">
     <script type="module" src="./JS_Scripts/portal/viewProfile.js"></script>
     <script type="module" src="./JS_Scripts/signOut.js"></script>
     <script src="JS_Scripts/initializeFirebase.js" type="module"></script>
     <script src="JS_Scripts/nav.js" type="module"></script>
-
+    <script type="module" src="JS_Scripts/portal/userDetails.js"></script>
 </head>
 <body>
     <div class="navigation">
@@ -32,7 +32,8 @@
         </nav>
     </div>
     <div class="main-content">
-        <h1>Welcome</h1>
+        <!--UserEmail is the section where a user who logged in gets a greeting with his email-->
+        <h1>Welcome <span id="userEmail"></span></h1>
         <div class="card-container">
             <div class="card">
                 <h4>Manage</h4>
