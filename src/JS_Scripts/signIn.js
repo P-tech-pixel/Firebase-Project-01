@@ -1,12 +1,16 @@
+//JS file purpose**********:JS to handle the user sign in using the firebase function
+
+
 import { auth } from './initializeFirebase.js';  // importing these items from the initializeFirebase.js file.
 import { signInWithEmailAndPassword, onAuthStateChanged  } from 'https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js';
 
-// Function to handle redirection and passing user info to portal
+// Function to handle redirection and passing user info to portal. 
 const redirectUserToPortal = (user) => {
-    // store the user's email and other information in local storage 
+    // store the user's email and other information in local storage. Once, the user store credentials in localStorage, it is saved for all browser session. 
     localStorage.setItem('userEmail', user.email);
-    //redirect to user portal page 
-    window.location.href ="/src/userPortal.html";
+
+    //redirect to loading page and portal Page.  
+    window.location.href ="/src/loadingPage.html";
 };
 
 const loginForm = document.getElementById('loginForm');

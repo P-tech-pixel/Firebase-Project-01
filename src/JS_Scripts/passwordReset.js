@@ -1,3 +1,5 @@
+//JS file purpose**********: JS page for resetting password using firebase function
+
 import { auth } from './initializeFirebase.js';
 import { sendPasswordResetEmail } from 'https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js';
 

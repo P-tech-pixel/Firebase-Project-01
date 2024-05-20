@@ -1,3 +1,5 @@
+//JS file purpose**********:JS page for setting up the page footer. 
+
 // Get the current year
 const currentYear = new Date().getFullYear();
 

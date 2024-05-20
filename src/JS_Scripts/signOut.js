@@ -1,3 +1,5 @@
+//JS file purpose**********: JS page for handeling user sign out function in firebase. 
+
 import {auth} from './initializeFirebase.js';  // importing these items from the initializeFirebase.js file.
 import { signOut } from 'https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js';
 

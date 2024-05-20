@@ -1,3 +1,5 @@
+//JS file purpose**********: User registartration using firebase function. 
+
 import { auth, fireStoreCollectionReference } from './initializeFirebase.js';
 import { createUserWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js';
 import { addDoc } from 'https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js';

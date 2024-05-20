@@ -1,8 +1,12 @@
+//JS file purpose**********: fetching the data from firestore Database. All the function are promise functions, and returns values.
+
+
 // Importing necessary references and functions from Firebase configuration and Firestore SDK.
-import { fireStoreCollectionReference } from './initializeFirebase.js'; // Importing the Firestore collection reference.
+import { fireStoreCollectionReference } from '../initializeFirebase.js'; // Importing the Firestore collection reference.
 import { onSnapshot, query, where } from 'https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js'; // Importing Firestore functions from the Firebase SDK.
 
 // get user firstname using userInputEmail in firebase.
+//NOTE: we have to use the try catch method inorder to get the value from the following function, as they are promise functions. 
 
 function getUsersFirstName(userInputEmail) {
   return new Promise((resolve, reject) => {
@@ -32,6 +36,7 @@ function getUsersFirstName(userInputEmail) {
 }
 
 // get user last name using userInputEmail firebase.
+//NOTE: we have to use the try catch method inorder to get the value from the following function, as they are promise functions. 
 
 function getUsersLastName(userInputEmail) {
   return new Promise((resolve, reject) => {
@@ -54,6 +59,7 @@ function getUsersLastName(userInputEmail) {
 }
 
 // get user email using userInputEmail in firebase.
+//NOTE: we have to use the try catch method inorder to get the value from the following function, as they are promise functions. 
 
 function getUsersEmail(userInputEmail) {
   return new Promise((resolve, reject) => {

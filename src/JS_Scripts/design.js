@@ -1,4 +1,4 @@
-// This is a Design folder for page using JS 
+//JS file purpose**********: This is a Design folder for page using JS 
 
 function spinToLoad(){
     var spinner = document.getElementById('loading');

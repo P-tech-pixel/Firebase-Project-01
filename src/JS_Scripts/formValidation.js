@@ -1,4 +1,6 @@
-// Function to validate form inputs
+//JS file purpose**********:// Function to validate form inputs
+
+
 function validateForm() {
     const password = document.getElementById('password').value;
     const verifyPassword = document.getElementById('verify_password').value;
